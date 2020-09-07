@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Property_Sets
+namespace Property_Sets.Operations
 {
-    public class Manager
+    public class ManageDpt
     {
-
     }
 }
