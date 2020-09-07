@@ -17,5 +17,9 @@ namespace Employees
             InitializeComponent();
         }
 
+        private void addDept(object sender, EventArgs e)
+        {
+
+        }
     }
 }
