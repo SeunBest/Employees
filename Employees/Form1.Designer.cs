@@ -48,8 +48,8 @@
             this.AddDpt = new System.Windows.Forms.Button();
             this.aDpt = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.delDept = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -95,7 +95,7 @@
             this.department.Name = "department";
             this.department.Size = new System.Drawing.Size(198, 28);
             this.department.TabIndex = 1;
-            this.department.Text = "Select Employee";
+            this.department.Text = "Select Department";
             // 
             // label7
             // 
@@ -241,15 +241,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Delete Employee";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 28);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "Select Employee";
-            // 
             // delDept
             // 
             this.delDept.Location = new System.Drawing.Point(241, 20);
@@ -258,6 +249,15 @@
             this.delDept.TabIndex = 8;
             this.delDept.Text = "Delete Department";
             this.delDept.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(0, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(198, 28);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.Text = "Select Employee";
             // 
             // Form1
             // 
@@ -270,6 +270,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Database";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

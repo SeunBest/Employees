@@ -23,18 +23,38 @@ namespace Employees
 
         private void addDept(object sender, EventArgs e)
         {
-            var dept = new Department();
-            dept.departmentName = aDpt.Text;
-            if (dept.departmentName != "")
+            if (aDpt.Text != "")
             {
-                Mad.AddDepartment(dept);
-                MessageBox.Show($"{dept.departmentName} department has been added succesfully");
+                Mad.AddDepartment(aDpt.Text);
+                MessageBox.Show($"{aDpt.Text} department has been added succesfully");
+
+                var deList = Mad.GetDepartments();
+
+                department.Items.Clear();
+                foreach (Department d in deList)
+                {
+                    //department.DropDownStyle = ComboBoxStyle.DropDownList;
+                    department.Items.Add(d.departmentName);
+                    //department.SelectionStart = d.departmentId;
+                }
             } else
             {
                 MessageBox.Show("Department Name can not be empty");
             }
 
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            var deList = Mad.GetDepartments();
+
+            foreach (Department d in deList)
+            {
+                //department.DropDownStyle = ComboBoxStyle.DropDownList;
+                department.Items.Add(d.departmentName);
+                //department.SelectionStart = d.departmentId;
+            }
         }
     }
 }
