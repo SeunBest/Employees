@@ -6,5 +6,6 @@ namespace Property_Sets.Operations
 {
     public interface IManageDpt
     {
+        public void AddDepartment(Department department);
     }
 }
