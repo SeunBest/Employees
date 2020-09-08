@@ -51,12 +51,31 @@
             this.delDept = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.AddDept = new System.Windows.Forms.Button();
+            this.upBox = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deptId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salp)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -87,8 +106,8 @@
             // 
             this.salp.Location = new System.Drawing.Point(242, 179);
             this.salp.Maximum = new decimal(new int[] {
-            1000000,
-            0,
+            -1530494976,
+            232830,
             0,
             0});
             this.salp.Name = "salp";
@@ -263,7 +282,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 26);
+            this.comboBox1.Location = new System.Drawing.Point(8, 28);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 28);
             this.comboBox1.TabIndex = 1;
@@ -271,13 +290,147 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.AddDept);
+            this.groupBox4.Controls.Add(this.upBox);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.numericUpDown1);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.dateTimePicker1);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.textBox2);
+            this.groupBox4.Controls.Add(this.textBox1);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Location = new System.Drawing.Point(12, 440);
+            this.groupBox4.Location = new System.Drawing.Point(12, 453);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(446, 401);
+            this.groupBox4.Size = new System.Drawing.Size(446, 321);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Update Employee";
+            // 
+            // AddDept
+            // 
+            this.AddDept.Location = new System.Drawing.Point(240, 271);
+            this.AddDept.Name = "AddDept";
+            this.AddDept.Size = new System.Drawing.Size(198, 34);
+            this.AddDept.TabIndex = 8;
+            this.AddDept.Text = "Update Employee";
+            this.AddDept.UseVisualStyleBackColor = true;
+            this.AddDept.Click += new System.EventHandler(this.updateEmp);
+            // 
+            // upBox
+            // 
+            this.upBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.upBox.FormattingEnabled = true;
+            this.upBox.Location = new System.Drawing.Point(6, 277);
+            this.upBox.Name = "upBox";
+            this.upBox.Size = new System.Drawing.Size(198, 28);
+            this.upBox.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 258);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 20);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Department";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(242, 182);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 20);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Salary";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(241, 205);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(198, 27);
+            this.numericUpDown1.TabIndex = 3;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 182);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 20);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Hire date";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 205);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(198, 27);
+            this.dateTimePicker1.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(242, 113);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(105, 20);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Phone number";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 113);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 20);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Email";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(242, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Last name";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(6, 136);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(199, 27);
+            this.textBox4.TabIndex = 1;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(240, 136);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(199, 27);
+            this.textBox3.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(240, 56);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(199, 27);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(7, 56);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(199, 27);
+            this.textBox1.TabIndex = 1;
             // 
             // label8
             // 
@@ -288,17 +441,53 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "First name";
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "employeeId";
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Id.Visible = false;
+            this.Id.Width = 125;
+            // 
+            // deptId
+            // 
+            this.deptId.DataPropertyName = "departmentId";
+            this.deptId.HeaderText = "deptId";
+            this.deptId.MinimumWidth = 6;
+            this.deptId.Name = "deptId";
+            this.deptId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.deptId.Visible = false;
+            this.deptId.Width = 125;
+            // 
+            // data
+            // 
+            this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.deptId});
+            this.data.Location = new System.Drawing.Point(519, 168);
+            this.data.Name = "data";
+            this.data.RowHeadersWidth = 51;
+            this.data.Size = new System.Drawing.Size(738, 590);
+            this.data.TabIndex = 4;
+            this.data.Text = "dataGridView1";
+            this.data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selectRow);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 853);
+            this.ClientSize = new System.Drawing.Size(1286, 786);
+            this.Controls.Add(this.data);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Employee Database";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -308,6 +497,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -338,6 +529,24 @@
         private System.Windows.Forms.NumericUpDown salp;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox upBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView data;
+        private System.Windows.Forms.Button AddDept;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deptId;
     }
 }
 
