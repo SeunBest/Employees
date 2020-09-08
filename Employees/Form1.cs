@@ -72,8 +72,14 @@ namespace Employees
             decimal wa = salp.Value;
             if (firstName.Text != "" && lastName.Text != "" && email.Text != "" && phone.Text != "")
             {
-                Made.AddEmployee(firstName.Text, lastName.Text, email.Text, phone.Text, hire.Value, wa, ids); ;
+                Made.AddEmployee(firstName.Text, lastName.Text, email.Text, phone.Text, hire.Value, wa, ids);
+                var ret = Made.GetEmployees();
+                data.DataSource = ret;
                 MessageBox.Show($"{firstName.Text} {lastName.Text} has been added succesfully");
+                firstName.Text = "";
+                lastName.Text = "";
+                email.Text = "";
+                phone.Text = "";
             }
             else
             {
@@ -119,6 +125,14 @@ namespace Employees
             MessageBox.Show($"{updateFirst.Text} {updateLast.Text} has been updated succesfully");
             var ret = Made.GetEmployees();
             data.DataSource = ret;
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            Made.DeleteEmployee(id);
+            var ret = Made.GetEmployees();
+            data.DataSource = ret;
+            MessageBox.Show($"Employee has been removed succesfully");
         }
     }
 }

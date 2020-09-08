@@ -60,5 +60,16 @@ namespace Property_Sets
                 return context.Employees.Include(x => x.department).Select(e => new { e.employeeId, e.firstName, e.lastName, e.email, e.phoneNumber, e.hireDate, e.salary, e.department.departmentId, e.department.departmentName }).ToList();
             }
         }
+
+        public void DeleteEmployee(int Id)
+        {
+            using (var context = new PersonContext())
+            {
+                var employee = context.Employees.Where(e => e.employeeId == Id).FirstOrDefault();
+                //var employee = del.Employees.Where(e => e.Id == ID);
+                context.Employees.Remove(employee);
+                context.SaveChanges();
+            }
+        }
     }
 }

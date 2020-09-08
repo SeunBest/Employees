@@ -51,7 +51,7 @@
             this.delDept = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.AddDept = new System.Windows.Forms.Button();
+            this.UpdateEmp = new System.Windows.Forms.Button();
             this.upBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -70,6 +70,7 @@
             this.deptId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
+            this.Delete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salp)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -291,7 +292,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.AddDept);
+            this.groupBox4.Controls.Add(this.UpdateEmp);
             this.groupBox4.Controls.Add(this.upBox);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
@@ -313,15 +314,15 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Update Employee";
             // 
-            // AddDept
+            // UpdateEmp
             // 
-            this.AddDept.Location = new System.Drawing.Point(240, 271);
-            this.AddDept.Name = "AddDept";
-            this.AddDept.Size = new System.Drawing.Size(198, 34);
-            this.AddDept.TabIndex = 8;
-            this.AddDept.Text = "Update Employee";
-            this.AddDept.UseVisualStyleBackColor = true;
-            this.AddDept.Click += new System.EventHandler(this.updateEmp);
+            this.UpdateEmp.Location = new System.Drawing.Point(240, 271);
+            this.UpdateEmp.Name = "UpdateEmp";
+            this.UpdateEmp.Size = new System.Drawing.Size(198, 34);
+            this.UpdateEmp.TabIndex = 8;
+            this.UpdateEmp.Text = "Update Employee";
+            this.UpdateEmp.UseVisualStyleBackColor = true;
+            this.UpdateEmp.Click += new System.EventHandler(this.updateEmp);
             // 
             // upBox
             // 
@@ -485,11 +486,22 @@
             this.label15.TabIndex = 5;
             this.label15.Text = "Display Screen";
             // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(536, 659);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(208, 29);
+            this.Delete.TabIndex = 6;
+            this.Delete.Text = "Delete Employee";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 786);
+            this.ClientSize = new System.Drawing.Size(1289, 786);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.data);
             this.Controls.Add(this.groupBox4);
@@ -541,7 +553,6 @@
         private System.Windows.Forms.NumericUpDown salp;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox upBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -556,10 +567,12 @@
         private System.Windows.Forms.TextBox updateLast;
         private System.Windows.Forms.TextBox updateFirst;
         private System.Windows.Forms.DataGridView data;
-        private System.Windows.Forms.Button AddDept;
+        private System.Windows.Forms.Button updateDept;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn deptId;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button UpdateEmp;
+        private System.Windows.Forms.Button Delete;
     }
 }
 
