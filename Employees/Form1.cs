@@ -15,10 +15,12 @@ namespace Employees
     public partial class Form1 : Form
     {
         IManageDpt Mad;
-        public Form1(IManageDpt mad)
+        IManageEmp Made;
+        public Form1(IManageDpt mad, IManageEmp made)
         {
             InitializeComponent();
             Mad = mad;
+            Made = made;
         }
 
         private void addDept(object sender, EventArgs e)
@@ -54,6 +56,21 @@ namespace Employees
                 //department.DropDownStyle = ComboBoxStyle.DropDownList;
                 department.Items.Add(d.departmentName);
                 //department.SelectionStart = d.departmentId;
+            }
+        }
+
+        private void addEmp_Click(object sender, EventArgs e)
+        {
+            int ids = department.SelectedIndex + 1;
+            decimal wa = salp.Value;
+            if (firstName.Text != "" && lastName.Text != "" && email.Text != "" && phone.Text != "")
+            {
+                Made.AddEmployee(firstName.Text, lastName.Text, email.Text, phone.Text, hire.Value, wa, ids); ;
+                MessageBox.Show($"{firstName.Text} {lastName.Text} has been added succesfully");
+            }
+            else
+            {
+                MessageBox.Show("Please fill all textboxes in Add Employee");
             }
         }
     }

@@ -12,6 +12,8 @@ namespace Property_Sets
         public string phoneNumber{ get; set; }
         public DateTime hireDate { get; set; }
         public decimal salary { get; set; }
+
+        public int departmentId { get; set; }
         public Department department { get; set; }
     }
 }

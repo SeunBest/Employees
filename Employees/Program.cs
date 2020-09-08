@@ -18,7 +18,7 @@ namespace Employees
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(Socket.calc));
+            Application.Run(new Form1(Socket.calc, Socket.calec));
         }
     }
 }

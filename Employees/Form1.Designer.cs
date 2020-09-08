@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.salp = new System.Windows.Forms.NumericUpDown();
             this.addEmp = new System.Windows.Forms.Button();
             this.department = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.salary = new System.Windows.Forms.TextBox();
+            this.hire = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.phone = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,21 +50,25 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.delDept = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salp)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.salp);
             this.groupBox1.Controls.Add(this.addEmp);
             this.groupBox1.Controls.Add(this.department);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.salary);
+            this.groupBox1.Controls.Add(this.hire);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.phone);
             this.groupBox1.Controls.Add(this.email);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -79,6 +83,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Employee";
             // 
+            // salp
+            // 
+            this.salp.Location = new System.Drawing.Point(242, 179);
+            this.salp.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.salp.Name = "salp";
+            this.salp.Size = new System.Drawing.Size(198, 27);
+            this.salp.TabIndex = 3;
+            // 
             // addEmp
             // 
             this.addEmp.Location = new System.Drawing.Point(241, 230);
@@ -87,15 +103,16 @@
             this.addEmp.TabIndex = 8;
             this.addEmp.Text = "Add Employee";
             this.addEmp.UseVisualStyleBackColor = true;
+            this.addEmp.Click += new System.EventHandler(this.addEmp_Click);
             // 
             // department
             // 
+            this.department.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.department.FormattingEnabled = true;
             this.department.Location = new System.Drawing.Point(7, 241);
             this.department.Name = "department";
             this.department.Size = new System.Drawing.Size(198, 28);
             this.department.TabIndex = 1;
-            this.department.Text = "Select Department";
             // 
             // label7
             // 
@@ -106,19 +123,12 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Department";
             // 
-            // dateTimePicker1
+            // hire
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(0, 179);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(205, 27);
-            this.dateTimePicker1.TabIndex = 6;
-            // 
-            // salary
-            // 
-            this.salary.Location = new System.Drawing.Point(241, 179);
-            this.salary.Name = "salary";
-            this.salary.Size = new System.Drawing.Size(198, 27);
-            this.salary.TabIndex = 4;
+            this.hire.Location = new System.Drawing.Point(0, 179);
+            this.hire.Name = "hire";
+            this.hire.Size = new System.Drawing.Size(205, 27);
+            this.hire.TabIndex = 6;
             // 
             // label6
             // 
@@ -138,12 +148,12 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Hire date";
             // 
-            // textBox1
+            // phone
             // 
-            this.textBox1.Location = new System.Drawing.Point(241, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 27);
-            this.textBox1.TabIndex = 1;
+            this.phone.Location = new System.Drawing.Point(241, 112);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(199, 27);
+            this.phone.TabIndex = 1;
             // 
             // email
             // 
@@ -247,7 +257,7 @@
             this.delDept.Name = "delDept";
             this.delDept.Size = new System.Drawing.Size(198, 34);
             this.delDept.TabIndex = 8;
-            this.delDept.Text = "Delete Department";
+            this.delDept.Text = "Delete Employee";
             this.delDept.UseVisualStyleBackColor = true;
             // 
             // comboBox1
@@ -259,23 +269,45 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Select Employee";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Location = new System.Drawing.Point(12, 440);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(446, 401);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Update Employee";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 33);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 20);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "First name";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 853);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee Database";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salp)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -286,11 +318,10 @@
         private System.Windows.Forms.Button addEmp;
         private System.Windows.Forms.ComboBox department;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox salary;
+        private System.Windows.Forms.DateTimePicker hire;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox phone;
         private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -304,6 +335,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button delDept;
+        private System.Windows.Forms.NumericUpDown salp;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label8;
     }
 }
 

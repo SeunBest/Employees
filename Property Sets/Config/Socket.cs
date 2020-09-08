@@ -8,5 +8,6 @@ namespace Property_Sets.Config
    public static class Socket
     {
         public static IManageDpt calc => new ManageDpt();
+        public static IManageEmp calec => new ManageEmp();
     }
 }
