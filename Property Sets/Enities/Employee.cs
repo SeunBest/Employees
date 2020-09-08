@@ -13,7 +13,7 @@ namespace Property_Sets
         public DateTime hireDate { get; set; }
         public decimal salary { get; set; }
 
-        public int departmentId { get; set; }
+        public int? departmentId { get; set; }
         public Department department { get; set; }
     }
 }

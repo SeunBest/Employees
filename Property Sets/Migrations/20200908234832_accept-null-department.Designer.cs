@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Property_Sets;
 
 namespace Property_Sets.Migrations
 {
     [DbContext(typeof(PersonContext))]
-    partial class PersonContextModelSnapshot : ModelSnapshot
+    [Migration("20200908234832_accept-null-department")]
+    partial class acceptnulldepartment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
