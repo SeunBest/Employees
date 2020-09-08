@@ -102,8 +102,12 @@ namespace Employees
 
             data.CurrentRow.Selected = true;
             id = Convert.ToInt32(data.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString());
+            updateFirst.Text = data.Rows[e.RowIndex].Cells["firstName"].FormattedValue.ToString();
+            updateLast.Text = data.Rows[e.RowIndex].Cells["lastName"].FormattedValue.ToString();
+            updateMail.Text = data.Rows[e.RowIndex].Cells["email"].FormattedValue.ToString();
+            updatePhone.Text = data.Rows[e.RowIndex].Cells["phoneNumber"].FormattedValue.ToString();
+            upDate.Value = Convert.ToDateTime(data.Rows[e.RowIndex].Cells["hireDate"].FormattedValue.ToString());
             MessageBox.Show($"{id}");
-
         }
 
         private void updateEmp(object sender, EventArgs e)

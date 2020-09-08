@@ -55,16 +55,16 @@
             this.upBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.upSale = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.upDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.updateMail = new System.Windows.Forms.TextBox();
+            this.updatePhone = new System.Windows.Forms.TextBox();
+            this.updateLast = new System.Windows.Forms.TextBox();
+            this.updateFirst = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deptId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +74,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upSale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -294,16 +294,16 @@
             this.groupBox4.Controls.Add(this.upBox);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.numericUpDown1);
+            this.groupBox4.Controls.Add(this.upSale);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.dateTimePicker1);
+            this.groupBox4.Controls.Add(this.upDate);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.textBox4);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.updateMail);
+            this.groupBox4.Controls.Add(this.updatePhone);
+            this.groupBox4.Controls.Add(this.updateLast);
+            this.groupBox4.Controls.Add(this.updateFirst);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Location = new System.Drawing.Point(12, 453);
             this.groupBox4.Name = "groupBox4";
@@ -349,17 +349,17 @@
             this.label13.TabIndex = 5;
             this.label13.Text = "Salary";
             // 
-            // numericUpDown1
+            // upSale
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(241, 205);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.upSale.Location = new System.Drawing.Point(241, 205);
+            this.upSale.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(198, 27);
-            this.numericUpDown1.TabIndex = 3;
+            this.upSale.Name = "upSale";
+            this.upSale.Size = new System.Drawing.Size(198, 27);
+            this.upSale.TabIndex = 3;
             // 
             // label12
             // 
@@ -370,12 +370,12 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "Hire date";
             // 
-            // dateTimePicker1
+            // upDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 205);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(198, 27);
-            this.dateTimePicker1.TabIndex = 6;
+            this.upDate.Location = new System.Drawing.Point(6, 205);
+            this.upDate.Name = "upDate";
+            this.upDate.Size = new System.Drawing.Size(198, 27);
+            this.upDate.TabIndex = 6;
             // 
             // label11
             // 
@@ -404,33 +404,33 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Last name";
             // 
-            // textBox4
+            // updateMail
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 136);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(199, 27);
-            this.textBox4.TabIndex = 1;
+            this.updateMail.Location = new System.Drawing.Point(6, 136);
+            this.updateMail.Name = "updateMail";
+            this.updateMail.Size = new System.Drawing.Size(199, 27);
+            this.updateMail.TabIndex = 1;
             // 
-            // textBox3
+            // updatePhone
             // 
-            this.textBox3.Location = new System.Drawing.Point(240, 136);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 27);
-            this.textBox3.TabIndex = 1;
+            this.updatePhone.Location = new System.Drawing.Point(240, 136);
+            this.updatePhone.Name = "updatePhone";
+            this.updatePhone.Size = new System.Drawing.Size(199, 27);
+            this.updatePhone.TabIndex = 1;
             // 
-            // textBox2
+            // updateLast
             // 
-            this.textBox2.Location = new System.Drawing.Point(240, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 27);
-            this.textBox2.TabIndex = 1;
+            this.updateLast.Location = new System.Drawing.Point(240, 56);
+            this.updateLast.Name = "updateLast";
+            this.updateLast.Size = new System.Drawing.Size(199, 27);
+            this.updateLast.TabIndex = 1;
             // 
-            // textBox1
+            // updateFirst
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 27);
-            this.textBox1.TabIndex = 1;
+            this.updateFirst.Location = new System.Drawing.Point(7, 56);
+            this.updateFirst.Name = "updateFirst";
+            this.updateFirst.Size = new System.Drawing.Size(199, 27);
+            this.updateFirst.TabIndex = 1;
             // 
             // label8
             // 
@@ -497,7 +497,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upSale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.ResumeLayout(false);
 
@@ -533,16 +533,16 @@
         private System.Windows.Forms.ComboBox upBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown upSale;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker upDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox updateMail;
+        private System.Windows.Forms.TextBox updatePhone;
+        private System.Windows.Forms.TextBox updateLast;
+        private System.Windows.Forms.TextBox updateFirst;
         private System.Windows.Forms.DataGridView data;
         private System.Windows.Forms.Button AddDept;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
