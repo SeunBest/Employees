@@ -31,6 +31,28 @@ namespace Property_Sets
             }
         }
 
+        public void Updatemployee(int ids, string first, string last, string mail, string phone, DateTime date, decimal wage, string dept)
+        {
+            using (var context = new PersonContext())
+            {
+                var dep = context.Departments.Where(s => s.departmentName == dept).FirstOrDefault();
+                var emp = new Employee()
+                {
+                    employeeId = ids,
+                    firstName = first,
+                    lastName = last,
+                    email = mail,
+                    phoneNumber = phone,
+                    hireDate = date,
+                    salary = wage,
+                    department = dep
+                };
+
+                context.Employees.Update(emp);
+                context.SaveChanges();
+            }
+        }
+
         public IEnumerable GetEmployees()
         {
             using (var context = new PersonContext())

@@ -107,12 +107,18 @@ namespace Employees
             updateMail.Text = data.Rows[e.RowIndex].Cells["email"].FormattedValue.ToString();
             updatePhone.Text = data.Rows[e.RowIndex].Cells["phoneNumber"].FormattedValue.ToString();
             upDate.Value = Convert.ToDateTime(data.Rows[e.RowIndex].Cells["hireDate"].FormattedValue.ToString());
-            MessageBox.Show($"{id}");
+            upSale.Value = Convert.ToDecimal(data.Rows[e.RowIndex].Cells["salary"].FormattedValue.ToString());
+            upBox.Text = data.Rows[e.RowIndex].Cells["departmentName"].FormattedValue.ToString();
         }
 
         private void updateEmp(object sender, EventArgs e)
         {
-
+            int idd = department.SelectedIndex + 1;
+            decimal was = upSale.Value;
+            Made.Updatemployee(id, updateFirst.Text, updateLast.Text, updateMail.Text, updatePhone.Text, upDate.Value, was, upBox.Text);
+            MessageBox.Show($"{updateFirst.Text} {updateLast.Text} has been updated succesfully");
+            var ret = Made.GetEmployees();
+            data.DataSource = ret;
         }
     }
 }

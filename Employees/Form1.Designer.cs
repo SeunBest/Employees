@@ -69,6 +69,7 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deptId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridView();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salp)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -324,7 +325,6 @@
             // 
             // upBox
             // 
-            this.upBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.upBox.FormattingEnabled = true;
             this.upBox.Location = new System.Drawing.Point(6, 277);
             this.upBox.Name = "upBox";
@@ -467,7 +467,7 @@
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.deptId});
-            this.data.Location = new System.Drawing.Point(519, 168);
+            this.data.Location = new System.Drawing.Point(536, 58);
             this.data.Name = "data";
             this.data.RowHeadersWidth = 51;
             this.data.Size = new System.Drawing.Size(738, 590);
@@ -475,11 +475,22 @@
             this.data.Text = "dataGridView1";
             this.data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selectRow);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(843, 27);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(151, 28);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Display Screen";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1286, 786);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.data);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -500,6 +511,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.upSale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -547,6 +559,7 @@
         private System.Windows.Forms.Button AddDept;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn deptId;
+        private System.Windows.Forms.Label label15;
     }
 }
 
