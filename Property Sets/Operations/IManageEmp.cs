@@ -11,6 +11,9 @@ namespace Property_Sets.Operations
         public IEnumerable GetEmployees();
         public void Updatemployee(int ids, string first, string last, string mail, string phone, DateTime date, decimal wage, string dept);
         public void DeleteEmployee(int Id);
+        public IEnumerable GetEmployeeDeps();
+        public IEnumerable GetEmployeeSal();
+        public IEnumerable GetEmployeeWit();
     }
 }
 

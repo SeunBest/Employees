@@ -89,23 +89,8 @@ namespace Employees
 
         private void selectRow(object sender, DataGridViewCellEventArgs e)
         {
-            /*try
+            try
             {
-                if (*//*data.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null*//* true)
-                {
-                    data.CurrentRow.Selected = true;
-                    id = Convert.ToInt32(data.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString());
-                    MessageBox.Show($"{id}");
-                }
-                else
-                {
-                    MessageBox.Show("Please highlight an employee");
-                }
-            } catch(Exception ex)
-            {
-                MessageBox.Show("Please click on an employee");
-            }*/
-
             data.CurrentRow.Selected = true;
             id = Convert.ToInt32(data.Rows[e.RowIndex].Cells["Id"].FormattedValue.ToString());
             updateFirst.Text = data.Rows[e.RowIndex].Cells["firstName"].FormattedValue.ToString();
@@ -115,6 +100,12 @@ namespace Employees
             upDate.Value = Convert.ToDateTime(data.Rows[e.RowIndex].Cells["hireDate"].FormattedValue.ToString());
             upSale.Value = Convert.ToDecimal(data.Rows[e.RowIndex].Cells["salary"].FormattedValue.ToString());
             upBox.Text = data.Rows[e.RowIndex].Cells["departmentName"].FormattedValue.ToString();
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Readonly");
+            }
+
+
         }
 
         private void updateEmp(object sender, EventArgs e)
@@ -133,6 +124,36 @@ namespace Employees
             var ret = Made.GetEmployees();
             data.DataSource = ret;
             MessageBox.Show($"Employee has been removed succesfully");
+        }
+
+        private void DeptGroup_Click(object sender, EventArgs e)
+        {
+            var ret = Made.GetEmployeeDeps();
+            data.DataSource = ret;
+        }
+
+        private void SalaryB_Click(object sender, EventArgs e)
+        {
+            var ret = Made.GetEmployeeSal();
+            data.DataSource = ret;
+        }
+
+        private void EmpDep_Click(object sender, EventArgs e)
+        {
+            var ret = Mad.GetEmptyDep();
+            data.DataSource = ret;
+        }
+
+        private void DiaplayDeps_Click(object sender, EventArgs e)
+        {
+            var ret = Made.GetEmployeeWit();
+            data.DataSource = ret;
+        }
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            var ret = Made.GetEmployees();
+            data.DataSource = ret;
         }
     }
 }

@@ -71,5 +71,29 @@ namespace Property_Sets
                 context.SaveChanges();
             }
         }
+
+        public IEnumerable GetEmployeeDeps()
+        {
+            using (var context = new PersonContext())
+            {
+                return context.Employees.Include(x => x.department).Select(e => new { e.firstName, e.lastName, e.department.departmentName }).ToList();
+            }
+        }
+
+        public IEnumerable GetEmployeeSal()
+        {
+            using (var context = new PersonContext())
+            {
+                return context.Employees.Where(e => e.salary > 150000).Select(e => new { e.firstName, e.lastName, e.salary }).ToList();
+            }
+        }
+
+        public IEnumerable GetEmployeeWit()
+        {
+            using (var context = new PersonContext())
+            {
+                return context.Employees.Select(s => new { s.firstName, s.lastName, s.department.departmentName }).ToList();
+            }
+        }
     }
 }

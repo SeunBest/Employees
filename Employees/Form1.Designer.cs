@@ -71,6 +71,11 @@
             this.data = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.Delete = new System.Windows.Forms.Button();
+            this.DeptGroup = new System.Windows.Forms.Button();
+            this.SalaryB = new System.Windows.Forms.Button();
+            this.EmpDep = new System.Windows.Forms.Button();
+            this.DiaplayDeps = new System.Windows.Forms.Button();
+            this.refresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salp)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -496,11 +501,66 @@
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
+            // DeptGroup
+            // 
+            this.DeptGroup.Location = new System.Drawing.Point(792, 659);
+            this.DeptGroup.Name = "DeptGroup";
+            this.DeptGroup.Size = new System.Drawing.Size(176, 29);
+            this.DeptGroup.TabIndex = 7;
+            this.DeptGroup.Text = "Display By Department";
+            this.DeptGroup.UseVisualStyleBackColor = true;
+            this.DeptGroup.Click += new System.EventHandler(this.DeptGroup_Click);
+            // 
+            // SalaryB
+            // 
+            this.SalaryB.Location = new System.Drawing.Point(1009, 659);
+            this.SalaryB.Name = "SalaryB";
+            this.SalaryB.Size = new System.Drawing.Size(265, 29);
+            this.SalaryB.TabIndex = 8;
+            this.SalaryB.Text = "Employees Earning ABove  150,000";
+            this.SalaryB.UseVisualStyleBackColor = true;
+            this.SalaryB.Click += new System.EventHandler(this.SalaryB_Click);
+            // 
+            // EmpDep
+            // 
+            this.EmpDep.Location = new System.Drawing.Point(536, 724);
+            this.EmpDep.Name = "EmpDep";
+            this.EmpDep.Size = new System.Drawing.Size(208, 29);
+            this.EmpDep.TabIndex = 9;
+            this.EmpDep.Text = "Empty Departments";
+            this.EmpDep.UseVisualStyleBackColor = true;
+            this.EmpDep.Click += new System.EventHandler(this.EmpDep_Click);
+            // 
+            // DiaplayDeps
+            // 
+            this.DiaplayDeps.Location = new System.Drawing.Point(760, 724);
+            this.DiaplayDeps.Name = "DiaplayDeps";
+            this.DiaplayDeps.Size = new System.Drawing.Size(254, 29);
+            this.DiaplayDeps.TabIndex = 10;
+            this.DiaplayDeps.Text = "Employees With Their Departments";
+            this.DiaplayDeps.UseVisualStyleBackColor = true;
+            this.DiaplayDeps.Click += new System.EventHandler(this.DiaplayDeps_Click);
+            // 
+            // refresh
+            // 
+            this.refresh.Location = new System.Drawing.Point(1020, 724);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(254, 29);
+            this.refresh.TabIndex = 11;
+            this.refresh.Text = "Refresh and Get All Employees";
+            this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1289, 786);
+            this.Controls.Add(this.refresh);
+            this.Controls.Add(this.DiaplayDeps);
+            this.Controls.Add(this.EmpDep);
+            this.Controls.Add(this.SalaryB);
+            this.Controls.Add(this.DeptGroup);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.data);
@@ -573,6 +633,11 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button UpdateEmp;
         private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button DeptGroup;
+        private System.Windows.Forms.Button SalaryB;
+        private System.Windows.Forms.Button EmpDep;
+        private System.Windows.Forms.Button DiaplayDeps;
+        private System.Windows.Forms.Button refresh;
     }
 }
 

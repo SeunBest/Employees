@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,6 +9,7 @@ namespace Property_Sets.Operations
     {
         public void AddDepartment(string department);
         public List<Department> GetDepartments();
+        public IEnumerable GetEmptyDep();
     }
     
 }
