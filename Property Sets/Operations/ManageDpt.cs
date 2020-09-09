@@ -6,8 +6,12 @@ using System.Text;
 
 namespace Property_Sets.Operations
 {
+    /// <summary>
+    /// This class handles department operations 
+    /// </summary>
     public class ManageDpt : IManageDpt
     {
+        // This methood adds a new department
         public void AddDepartment(string department)
         {
             using (var context = new PersonContext())
@@ -21,6 +25,7 @@ namespace Property_Sets.Operations
             }
         }
 
+        // This method gets the list of all the departments
         public List<Department> GetDepartments()
         {
             using (var context = new PersonContext())
@@ -29,6 +34,7 @@ namespace Property_Sets.Operations
             }
         }
 
+        // This method gets the list of all the empty departments
         public IEnumerable GetEmptyDep()
         {
             using (var context = new PersonContext())

@@ -3,6 +3,9 @@ using System.Data.SqlTypes;
 
 namespace Property_Sets
 {
+    /// <summary>
+    /// This domain class defines the schema for the Employee table 
+    /// </summary>
     public class Employee
     {
         public int employeeId { get; set; }

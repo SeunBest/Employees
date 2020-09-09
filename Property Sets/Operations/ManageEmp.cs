@@ -8,8 +8,12 @@ using System.Text;
 
 namespace Property_Sets
 {
+    /// <summary>
+    /// This class has all the employee operations
+    /// </summary>
     public class ManageEmp : IManageEmp
     {
+        // This method adds a new employee
         public void AddEmployee(string first, string last, string mail, string phone, DateTime date, decimal wage, int id)
         {
             using (var context = new PersonContext())
@@ -30,7 +34,8 @@ namespace Property_Sets
                 context.SaveChanges();
             }
         }
-
+        
+        // This method updates an employee
         public void Updatemployee(int ids, string first, string last, string mail, string phone, DateTime date, decimal wage, string dept)
         {
             using (var context = new PersonContext())
@@ -53,6 +58,7 @@ namespace Property_Sets
             }
         }
 
+        // This method gets all employees
         public IEnumerable GetEmployees()
         {
             using (var context = new PersonContext())
@@ -61,17 +67,18 @@ namespace Property_Sets
             }
         }
 
+        // This method deletes an employee
         public void DeleteEmployee(int Id)
         {
             using (var context = new PersonContext())
             {
                 var employee = context.Employees.Where(e => e.employeeId == Id).FirstOrDefault();
-                //var employee = del.Employees.Where(e => e.Id == ID);
                 context.Employees.Remove(employee);
                 context.SaveChanges();
             }
         }
 
+        // This method gets all the departments
         public IEnumerable GetEmployeeDeps()
         {
             using (var context = new PersonContext())
@@ -80,6 +87,7 @@ namespace Property_Sets
             }
         }
 
+        // This method gets all employees with salaries > 150,000
         public IEnumerable GetEmployeeSal()
         {
             using (var context = new PersonContext())
@@ -88,6 +96,7 @@ namespace Property_Sets
             }
         }
 
+        // This method gets all employees with their departments
         public IEnumerable GetEmployeeWit()
         {
             using (var context = new PersonContext())
